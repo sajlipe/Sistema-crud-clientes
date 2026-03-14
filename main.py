@@ -575,8 +575,7 @@ def excluir_cliente(cliente_id):
     cliente = cursor.fetchone()
 
     if not cliente:
-        messagebox.showerror("Erro", "Cliente não encontrado.",
-            parent=nova_janela)
+        messagebox.showerror("Erro", "Cliente não encontrado.",)
         conexao.close()
         return
 
@@ -598,8 +597,7 @@ CPF/CNPJ: {formatar_documento(cpf_cnpj)}
             f"O cliente possui {num_pedidos} pedido(s) associado(s).\n\n"
             f"{info_cliente}\n"
             "Ao excluir o cliente, todos os pedidos também serão excluídos.\n\n"
-            "Deseja continuar?",
-            parent=nova_janela
+            "Deseja continuar?"
         )
 
         if not confirmar:
@@ -610,9 +608,7 @@ CPF/CNPJ: {formatar_documento(cpf_cnpj)}
             "Confirmação Final",
             f"Tem certeza que deseja excluir este cliente?\n\n"
             f"{info_cliente}\n"
-            "Esta ação é irreversível.",
-            parent=nova_janela
-        )
+            "Esta ação é irreversível.")
 
         if not confirmar2:
             conexao.close()
@@ -628,8 +624,7 @@ CPF/CNPJ: {formatar_documento(cpf_cnpj)}
             "Confirmação",
             f"Tem certeza que deseja excluir este cliente?\n\n"
             f"{info_cliente}\n"
-            "Esta ação é irreversível.",
-            parent=nova_janela
+            "Esta ação é irreversível."
         )
 
         if not confirmar:
@@ -641,8 +636,7 @@ CPF/CNPJ: {formatar_documento(cpf_cnpj)}
     conexao.commit()
     conexao.close()
 
-    messagebox.showinfo("Sucesso", "Cliente excluído com sucesso!",
-        parent=nova_janela)
+    messagebox.showinfo("Sucesso", "Cliente excluído com sucesso!")
 
 # ============================================
 # FUNÇÃO ANEXAR PDF

@@ -1,0 +1,19 @@
+# Cache do Python
+_pycache_/
+*.pyc
+*.pyo
+
+# Arquivos do PyInstaller
+build/
+dist/
+*.spec
+
+# Banco de dados
+*.db
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Configuração do VS Code
+.vscode/

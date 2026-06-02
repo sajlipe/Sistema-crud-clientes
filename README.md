@@ -65,8 +65,6 @@ assets/
     logo.ico             # Ícone da aplicação
     logo.png             # Logo da aplicação
 requirements.txt         # Dependências Python
-installer.iss            # Script do Inno Setup (para build do instalador)
-build_installer.ps1      # Script PowerShell para gerar o instalador
 ```
 
 ## Dependências
@@ -85,6 +83,8 @@ pip install -r requirements.txt
 
 ## Build e Packaging
 
+Para gerar o executável e instalador, use os scripts locais (não estão no repositório, mas estão no seu PC):
+
 ### Gerar Executável (PyInstaller)
 
 ```powershell
@@ -100,26 +100,7 @@ Resultado: `dist/SistemaCRUD.exe`
 
 ### Gerar Instalador (Inno Setup)
 
-Requer Inno Setup 6 instalado. Execute:
+Requer Inno Setup 6 instalado.
 
-```powershell
-& "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
-```
-
-Resultado: `installer/SistemaCRUD_Installer_2.0.exe`
-
-Ou use o script automático:
-```powershell
-.\build_installer.ps1
-```
-
-## Banco de Dados
-
-- **Localização na instalação:** `%LOCALAPPDATA%\SistemaCRUD\clientes.db`
-- **Localização em desenvolvimento:** `./clientes.db` (diretório do projeto)
-- **Backup:** `%LOCALAPPDATA%\SistemaCRUD\backups/` ou `./backups/`
-
-## Fora do Escopo da V2.0
-
-Login, banco online, servidor, sincronização, aplicativo Android e atualização automática ficam planejados para a V3.0.
+O instalador gerado fica em `installer/SistemaCRUD_Installer_2.0.exe` e é distribuído como artefato de release no GitHub.
 

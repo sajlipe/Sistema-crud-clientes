@@ -10,8 +10,15 @@ dist/
 build_v2/
 dist_v2/
 *.spec
-!main.spec
 installer/
+
+# Scripts de build (opcionais)
+build_installer.ps1
+installer.iss
+
+# Testes e utilitários (não são produção)
+check_deps.py
+test_criar.py
 
 # Banco de dados
 *.db

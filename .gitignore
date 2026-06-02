@@ -1,15 +1,25 @@
 # Cache do Python
-_pycache_/
+__pycache__/
 *.pyc
 *.pyo
+.venv/
 
 # Arquivos do PyInstaller
 build/
 dist/
+build_v2/
+dist_v2/
 *.spec
+!main.spec
+installer/
 
 # Banco de dados
 *.db
+backups/
+
+# Arquivos locais gerados em uso
+app.log
+config.json
 
 # Arquivos do sistema
 .DS_Store

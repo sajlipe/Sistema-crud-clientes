@@ -14,7 +14,6 @@ installer/
 
 # Scripts de build (opcionais)
 build_installer.ps1
-installer.iss
 
 # Testes e utilitários (não são produção)
 check_deps.py

@@ -42,12 +42,14 @@ Filename: "{app}\SistemaCRUD.exe"; Description: "Executar SistemaCRUD"; Flags: n
 [Code]
 procedure DeleteOldInstall();
 var
-  OldDirs: array[0..2] of string;
+  OldDirs: array[0..4] of string;
   I: Integer;
 begin
   OldDirs[0] := 'C:\SistemaCRUD';
-  OldDirs[1] := ExpandConstant('{pf}\SistemaCRUD');
-  OldDirs[2] := ExpandConstant('{commonpf}\SistemaCRUD');
+  OldDirs[1] := 'C:\Sistema de Gerenciamento de Clientes';
+  OldDirs[2] := ExpandConstant('{pf}\SistemaCRUD');
+  OldDirs[3] := ExpandConstant('{pf}\Sistema de Gerenciamento de Clientes');
+  OldDirs[4] := ExpandConstant('{commonpf}\SistemaCRUD');
 
   for I := 0 to GetArrayLength(OldDirs) - 1 do
   begin

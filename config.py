@@ -17,6 +17,8 @@ DEFAULT_THEME = "flatly"
 
 def app_dir() -> Path:
     """Return the folder where the application is installed."""
+    if getattr(sys, "frozen", False):
+        return Path(sys.executable).resolve().parent
     return Path(__file__).resolve().parent
 
 
